@@ -1,0 +1,17 @@
+Table of the function runtimes 
+
+Array size:      | doublerAppend   | doublerInsert    |
+tinyArray        |     80.1micro   |     34.6micro    |
+smallArray       |     93.5micro   |     43.6micro    |
+mediumArray      |     134.5micro  |     171.1micro   |
+largeArray       |     497.6micro  |     8.03ms       |
+extraLargeArray  |     4.5ms       |     797.75ms     |
+
+Paragraph:
+
+    Looking over the table shown above, the doublerAppend function for running an
+    array no matter the size is much more efficient. The doublerAppend function seems to be more linear, where as the doublerInsert function takes a big jump after running the medium array and each array after that takes an even bigger jump. Overall, the doublerAppend scales better, in the sense of being more efficient.
+
+Extra Credit:
+
+    The doublerInsert function uses the .unshift method where as the doublerAppend uses the .push method. The unshift method is much less efficient because it has one too many steps to take to run than the push method. The unshift method adds the elements to the front of the array, which means that after the added elements are added ot the front of the array the rest of the array has to shift over. You can imagine how much more time you are wasting doing that as the array gets bigger. The push method however, just adds the new elements to the back of the array so there is no shifting. The push method has less steps to be able to execute the function.
